@@ -15,14 +15,10 @@ export default class Experience2 {
 
     const renderer = new THREE.WebGLRenderer({ canvas: canvas });
     const wrapper = canvas.parentElement;
-
     const width = wrapper.clientWidth;
     const height = wrapper.clientHeight;
-
-    // canvas のサイズを親要素に合わせる
-    canvas.width = width;
-    canvas.height = height;
-
+    // const width = 800;
+    // const height = 450;
     renderer.setSize(width, height);
 
     const geometry = new THREE.BoxGeometry(1, 1, 1);
@@ -44,6 +40,8 @@ export default class Experience2 {
     this.onResize = function () {
         const width = wrapper.clientWidth;
         const height = wrapper.clientHeight;
+        // const width = 800;
+        // const height = 450;
         camera.aspect = width / height;
         camera.updateProjectionMatrix();
         renderer.setSize(width, height);
