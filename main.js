@@ -1,7 +1,7 @@
-import './style.css'
-import javascriptLogo from './javascript.svg'
-import Experience from './Experience/Experience.js'
-import Experience2 from './Experience/Experience2.js'
+import './style.css';
+import javascriptLogo from './javascript.svg';
+import Experience from './Experience/Experience.js';
+import Experience2 from './Experience2/Experience2.js';
 
 // 初期化関数
 function init() {

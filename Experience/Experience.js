@@ -1,9 +1,12 @@
 import * as THREE from "three";
 
+import GSAP from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
 export default class Experience {
   constructor(canvas) {
     this.canvas = canvas;
-    console.log("Hello World");
+    // console.log("Hello World");
 
     const scene = new THREE.Scene();
     const camera = new THREE.PerspectiveCamera(
@@ -46,5 +49,80 @@ export default class Experience {
       window.addEventListener("resize", this.onResize);
 
     animate();
+
+    // GSAP.registerPlugin(ScrollTrigger);
+
+        // const fadeIns = document.querySelectorAll(".fade_in");
+
+        // fadeIns.forEach((fadeIn) => {
+        //     GSAP.fromTo(
+        //         fadeIn,
+        //         {
+        //             y: 10,
+        //             autoAlpha: 0,
+        //         },
+        //         {
+        //             y: 0,
+        //             autoAlpha: 1,
+        //             duration: 2,
+        //             scrollTrigger: {
+        //                 trigger: fadeIn,
+        //                 toggleActions: "play none none reset",
+        //                 start: "top center",
+        //                 markers: true,
+        //             }
+        //         }
+        //     );
+        // });
+
+        // ScrollTrigger.matchMedia({
+        //     // Mobile
+        //     "(max-width: 768px)": () => {
+        //         const fadeInRights = document.querySelectorAll(".fade_in_right");
+
+        //         fadeInRights.forEach((item) => {
+        //             GSAP.fromTo(
+        //                 item,
+        //                 {
+        //                     x: 60,
+        //                     autoAlpha: 0,
+        //                 },
+        //                 {
+        //                     x: 0,
+        //                     autoAlpha: 1,
+        //                     duration: 1,
+        //                     scrollTrigger: {
+        //                         trigger: item,
+        //                         toggleActions: "play none none reset",
+        //                         start: "top center",
+        //                         markers: true,
+        //                     }
+        //                 }
+        //             );
+        //         });
+        //         const fadeInLefts = document.querySelectorAll(".fade_in_left");
+
+        //         fadeInLefts.forEach((item) => {
+        //             GSAP.fromTo(
+        //                 item,
+        //                 {
+        //                     x: -60,
+        //                     autoAlpha: 0,
+        //                 },
+        //                 {
+        //                     x: 0,
+        //                     autoAlpha: 1,
+        //                     duration: 1,
+        //                     scrollTrigger: {
+        //                         trigger: item,
+        //                         toggleActions: "play none none reset",
+        //                         start: "top center",
+        //                         markers: true,
+        //                     }
+        //                 }
+        //             );
+        //         });
+        //     },
+        // });
   }
 }

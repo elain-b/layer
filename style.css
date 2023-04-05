@@ -563,6 +563,12 @@ input[name="toggle"] {
   margin-top: 5rem;
 }
 
+/* 追加した */
+/* .fade_in {
+  position: relative;
+  opacity: 0;
+} */
+
 /*--------------------------------------------------------------
 |
 | 7.5 PRICING
